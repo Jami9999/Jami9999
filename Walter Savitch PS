@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+#include <iomanip>
+using namespace std ;
+
+int f (double budget , double cost_per_area) {
+            double area , length ;
+            cout << setprecision (2) ;
+            cout << fixed ;
+            area = budget / cost_per_area ;
+            length = sqrt (area) ;
+            cout << "For a price $" << budget << " , I can build you a luxurious square dog house that is " << length << " feet on each side." << "\n" ;
+            return 1 ;
+}
+
+int main () {
+            double budget , cost_per_area ;
+            cout << "Enter your budget : $" ;
+            cin >> budget ;
+            cout << "Enter cost price per area : $" ;
+            cin >> cost_per_area ;
+            f (budget , cost_per_area) ;
+            return 0 ;
+}
