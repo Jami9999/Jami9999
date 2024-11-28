@@ -1,0 +1,63 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+class Student {
+public:
+            void r (string name , int roll , int n , string s [] , int marks []) {
+                        int t = 0 ;
+                        for (int i = 0 ; i < n ; i ++) {
+                                    t += marks [i] ;
+                        }
+                        int a = t / n ;
+                        cout << "Name : " << name << "\n" ;
+                        cout << "Roll : " << roll << "\n" ;
+                        cout << "Result : " << "\n" ;
+                        for (int i = 0 ; i < n ; i ++) {
+                                    cout << s [i] << " : " << marks [i] << "\n" ;
+                        }
+                        cout << "Total : " << t << "\n" ;
+                        cout << "Average : " << a << "\n" ;
+                        if (a >= 80) {
+                                    cout << "Grade : A+" << "\n" ;
+                        } else if (a >= 70) {
+                                    cout << "Grade : A" << "\n" ;
+                        } else if (a >= 60) {
+                                    cout << "Grade : A-" << "\n" ;
+                        } else if (a >= 50) {
+                                    cout << "Grade : B" << "\n" ;
+                        } else if (a >= 40) {
+                                    cout << "Grade : C" << "\n" ;
+                        } else if (a >= 33) {
+                                    cout << "Grade : D" << "\n" ;
+                        } else {
+                                    cout << "Grade : F" << "\n" ;
+                        }
+            }
+} ;
+
+int main () {
+            string name ;
+            cout << "Enter your name : " ;
+            getline (cin , name) ;
+            int roll ;
+            cout << "Enter the roll : " ;
+            cin >> roll ;
+            int n ;
+            cout << "Enter the number of subjects : " ;
+            cin >> n ;
+            string s [n] ;
+            cout << "Enter the name of subjects : " << "\n" ;
+            for (int i = 0 ; i < n ; i ++) {
+                    cin >> s [i] ;
+            }
+            int marks [n] ;
+            cout << "Enter the marks of the subjects : " << "\n" ;
+            for (int i = 0 ; i < n ; i ++) {
+                        cin >> marks [i] ;
+            }
+            Student object_1 ;
+            object_1.r (name , roll , n , s , marks) ;
+            return 0 ;
+}
