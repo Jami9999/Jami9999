@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f () {
+            cout << "Hello World!" << "\n" ;
+            exit (1) ;
+            cout << "Assalamualikum = Unecessary statement" << "\n" ;
+}
+
+int main () {
+            f () ;
+            return 0 ;
+}
