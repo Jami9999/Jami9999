@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (double m , double n , double a) {
+            double t = (ceil (m / a) * ceil (n / a)) ;
+            cout << t << "\n" ;
+            return t ;
+}
+
+int main () {
+            double m , n , a ;
+            cin >> m >> n >> a ;
+            f (m , n , a) ;
+            return 0 ;
+}
