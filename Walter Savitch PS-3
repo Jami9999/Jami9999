@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+using namespace std ;
+
+int f (int m , int d) {
+            int p ;
+            char another ;
+            do {
+                        srand (time (0)) ;
+                        p = rand () % 3 ;
+                        switch (p) {
+                                    case 0 : cout << "It is Sunny day" << "\n" ;
+                                    break ;
+                                    case 1 : cout << "It is Rainy day" << "\n" ;
+                                    break ;
+                                    case 2 : cout << "It is cloudy day" << "\n" ;
+                                    break ;
+                                    default : cout << "Sorry , Weather program is not running" << "\n" ;
+                                    break ;
+                        }
+                        cout << "Enter yes (y) for continue giving information or no (n) for stop : " ;
+                        cin >> another ;
+            } while (another == 'y') ;
+            cout << "These is 24-hour weather program" << "\n" ;
+            return 1 ;
+}
+
+int main () {
+            int m , d ;
+            cout << "Welcome to weather program" << "\n" ;
+            cout << "Enter the number of month and the number of day as integer : " ;
+            cin >> m >> d ;
+            f (m , d) ;
+            return 0 ;
+}
