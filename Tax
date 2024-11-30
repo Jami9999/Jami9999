@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (int piece , double price_per_piece) {
+            double c = (piece * price_per_piece) , tax = (0.05 * c) ;
+            cout << "Final bill including tax : $" << c + tax << "\n" ;
+            return c ;
+}
+
+int main () {
+            int piece ;
+            double price_per_piece ;
+            cout << "Enter number of pieces that you want to buy : " ;
+            cin >> piece ;
+            cout << "Enter the price of per piece : $" ;
+            cin >> price_per_piece ;
+            f (piece , price_per_piece) ;
+            return 0 ;
+}
