@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (int M , int N) {
+            int c = 0 ;
+            for (int i = 1 ; i <= (M * N) ; i ++) {
+                        if (i % 2 == 0) {
+                                c ++ ;    
+                        }
+            }
+            cout << c << "\n" ;
+            return c ;
+}
+
+int main () {
+            int M , N ;
+            cin >> M >> N ;
+            f (M , N) ;
+            return 0 ;
+}
