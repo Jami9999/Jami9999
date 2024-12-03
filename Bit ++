@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (int t) {
+            while (t --) {
+                        string x ;
+                        cin >> x ;
+                        int c = 0 ;
+                        if (x == "X++") {
+                                    c ++ ;            
+                        } else if (x == "X--") {
+                                    c -- ;
+                        } else if (x == "++X") {
+                                    ++ c ;
+                        } else {
+                                    -- c ;
+                        }
+                        cout << c << "\n" ;
+            }
+            return t ;
+}
+
+int main () {
+            int t ;
+            cin >> t ;
+            f (t) ;
+            return 0 ;
+}
