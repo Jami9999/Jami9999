@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (int a [5][5]) {
+            int rows , columns , center_row , center_column , moves ;
+            for (int i = 1 ; i <= 5 ; i ++) {
+                        for (int j = 1 ; j <= 5 ; j ++) {
+                                    if (a [i][j] == 1) {
+                                                rows = i ;
+                                                columns = j ;
+                                    }
+                        }
+            }
+            center_row = 3 , center_column = 3 ;
+            moves = abs (rows - center_row) + abs (columns - center_column) ;
+            cout << moves << "\n" ;
+            return moves ;
+}
+
+int main () {
+            int a [5][5] ;
+            for (int i = 1 ; i <= 5 ; i ++) {
+                        for (int j = 1 ; j <= 5 ; j ++) {
+                                    cin >> a [i][j] ;
+                        }
+            }
+            f (a) ;
+            return 0 ;
+}
