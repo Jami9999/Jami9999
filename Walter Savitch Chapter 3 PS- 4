@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (double v) {
+            cout << "Rounded . The value is : " << round (v) << "\n" ;
+            string s ;
+            cout << "To stop , enter 'N'" << "\n" ;
+            cout << "To enter , enter 'Y'" << "\n" ;
+            cout << "Enter : " ;
+            cin >> s ;
+            while (s == "Y") {
+                        cout << "Enter a double value : " ;
+                        cin >> v ;
+                        cout << "Rounded . The value is : " << round (v) << "\n" ;
+                        cout << "To stop , enter 'N'" << "\n" ;
+                        cout << "To enter , enter 'Y'" << "\n" ;
+                        cout << "Enter : " ;
+                        cin >> s ;
+            }
+            return 1 ;
+}
+
+int main () {
+            double v ;
+            cout << "Enter a double value : " ;
+            cin >> v ;
+            f (v) ;
+            return 0 ;
+}
