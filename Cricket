@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (string s) {
+            int runs = 0 , w = 0  , o = 0 ;
+            for (int i = 0 ; i < s.length () ; i ++) {
+                        if (s [i] == 'W') {
+                                    w ++ ;    
+                        } 
+                        runs += s [i] - '0' ; 
+            }        
+            cout << s.length () << " balls , " << runs << " runs , " << w << " wickets." << "\n" ;
+            return 1 ;
+}
+
+int main () {
+            string s ;
+            cout << "Enter the runs and wickets of all balls '123423W' like this : " ;
+            cin >> s ;
+            f (s) ;
+            return 0 ;
+}
