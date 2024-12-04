@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (int number_of_customer , int weight) {
+            while (number_of_customer <= 0) {
+                        cout << "Sorry , you enter negative or zero customer" << "\n" ;
+                        cout << "Customer number can't be zero or negative" << "\n" ;
+                        cout << "Enter again : " ;
+                        cin >> number_of_customer ;
+            } 
+            int each_person_ratio ;
+            each_person_ratio = weight / number_of_customer ;
+            cout << "Each person will eat " << each_person_ratio << " Kg ice cream" << "\n" ;
+            return each_person_ratio ;
+            
+}
+
+int main () {
+            int number_of_customer , weight ;
+            cout << "Enter the number of customers in the shop : " ;
+            cin >> number_of_customer ;
+            cout << "Enter the total weight of ice cream  in (kg) : " ;
+            cin >> weight ;
+            f (number_of_customer , weight) ;
+            return 0 ;
+}
