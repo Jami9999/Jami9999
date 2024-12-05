@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (double radious_circle) {
+            double area_circle ;
+            area_circle = (3.14159) * radious_circle * radious_circle ;
+            cout << "Radious of circle : " << radious_circle << "\n" ;
+            cout << "Area of circle : " << area_circle << "\n" ;
+            return area_circle ;
+}
+
+int g (double radious_sphere) {
+            double volume_sphere ;
+            volume_sphere = (4.0 / 3.0) * (3.14159) * ((radious_sphere) * (radious_sphere) * (radious_sphere)) ;
+            cout << "Radious of sphere : " << radious_sphere << "\n" ;
+            cout << "Volume of sphere : " << volume_sphere << "\n" ;
+            return volume_sphere ;
+}
+
+int main () {
+            double radious_circle , radious_sphere ;
+            cout << "Enter the radious of circle and sphere in inches : " ;
+            cin >> radious_circle >> radious_sphere ;
+            f (radious_circle) ;
+            g (radious_sphere) ;
+            return 0 ;
+}
