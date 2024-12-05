@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (int min_pea , int max_pea , int pod , float average_weight) {
+            float yield ;
+            yield = (average_weight) * (average_weight) ;
+            cout << "Number of minimum peas : " << min_pea << "\n" ;
+            cout << "Number of maximum peas : " << max_pea << "\n" ;
+            cout << "Total pods count : " << pod << "\n" ;
+            cout << "Average weight of peas : " << average_weight << "\n" ;
+            cout << "Total estimated yield : " << yield << "\n" ;
+            return yield ;
+}
+
+int main () {
+            int min_pea , max_pea , pod ;
+            float average_weight ;
+            cout << "Enter the number of minimum pea in pods : " ;
+            cin >> min_pea ;
+            cout << "Enter the number of maximum  pea in pods : " ;
+            cin >> max_pea ;
+            cout << "Enter the number of pods : " ;
+            cin >> pod ;
+            cout << "Enter the average weight of peas in kg : " ;
+            cin >> average_weight ;
+            f (min_pea , max_pea , pod , average_weight) ;
+            return 0 ;
+}
