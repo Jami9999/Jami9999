@@ -4,8 +4,8 @@
 using namespace std ;
 
 int f (int min_pea , int max_pea , int pod , float average_weight) {
-            float yield ;
-            yield = (average_weight) * (average_weight) ;
+            double yield ;
+            yield = ((average_weight) * (average_weight)) * 100 ;
             cout << "Number of minimum peas : " << min_pea << "\n" ;
             cout << "Number of maximum peas : " << max_pea << "\n" ;
             cout << "Total pods count : " << pod << "\n" ;
