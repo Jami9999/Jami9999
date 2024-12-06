@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (int l , int m) {
+            double galon , miles ;
+            galon = l * (0.264179) ;
+            miles = m / galon ;
+            cout << "Galons used : " << galon << "\n" ;
+            cout << "Miles per galon : " << miles << "\n" ;
+            return 1 ;
+}
+
+int main () {
+            int l , m ;
+            cout << "Enter the number of litres that car travel and the number of miles that car travel : " ;
+            cin >> l >> m ;
+            f (l , m) ;
+            return 0 ;
+}
