@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (double G , double m1 , double m2 , double d) {
+            double F = (G * (m1 * m2)) / (d * d) ;
+            cout << "Force : " << F << " N " << "\n" ;
+            return F ;
+}
+
+int main () {
+            double G = 6.673*(1 / (pow (10 , 8))) , m1 , m2 , d ;
+            cout << "Enter the masses and distance : " ;
+            cin >> m1 >> m2 >> d ;
+            f (G , m1 , m2 , d) ;
+            return 0 ;
+}
