@@ -16,3 +16,36 @@ int main () {
             f (G , m1 , m2 , d) ;
             return 0 ;
 }
+
+
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (double G , double m1 , double m2 , double d) {
+            string o ;
+            double F = G * (m1 * m2) / (d * d) ;
+            cout << "Force : " << F << "\n" ;
+            cout << "Press 'Y' to continue and 'N' to stop" << "\n" ;
+            cout << "Press : " ;
+            cin >> o ;
+            while (o != "N") {
+                        cout << "Enter the masses m1 and m2 and distance of the earth : " ;
+                        cin >> m1 >> m2 >> d ;
+                        double F = G * (m1 * m2) / (d * d) ;
+                        cout << "Force : " << F << "\n" ;
+                        cout << "Press 'Y' to continue and 'N' to stop" << "\n" ;
+                        cout << "Press : " ;
+                        cin >> o ;
+            }
+            return 1 ;
+}
+
+int main () {
+            double G = 6.673 * (1 / pow (10 , 8)) , m1 , m2 , d ;
+            cout << "Enter the masses m1 and m2 and distance of the earth : " ;
+            cin >> m1 >> m2 >> d ;
+            f (G , m1 , m2 , d) ;
+            return 0 ;
+}
