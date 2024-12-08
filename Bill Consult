@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (double hour , double min) {
+            double bill ;
+            bill = ((hour * 60) + min) * (1.5) ;
+            cout << "Welcome to IBN SINA HOSPITAL" << "\n" ;
+            cout << "You will consult with DR. Jahangir Kabir IN SHA ALLAH" << "\n" ;
+            cout << "Consult bill : $" << bill << "\n" ;
+            string o ;
+            cout << "Press 'Y' to consult again or 'N' to end consult" << "\n" ;
+            cout << "Press : " ;
+            cin >> o ;
+            while (o != "N") {
+                        cout << "Enter how many hours and minutes you consult : " ;
+                        cin >> hour >> min ;
+                        bill = ((hour * 60) + min) * (1.5) ;
+                        cout << "Welcome to IBN SINA HOSPITAL" << "\n" ;
+                        cout << "You will consult with DR. Jahangir Kabir IN SHA ALLAH" << "\n" ;
+                        cout << "Consult bill : " << bill << "\n" ;  
+                        cout << "Press 'Y' to consult again or 'N' to end consult" << "\n" ;
+                        cout << "Press : " ;
+                        cin >> o ;
+            }
+            return bill ;
+}
+
+int main () {
+            double hour , min ;
+            cout << "Enter how many hours and minutes you consult : " ;
+            cin >> hour >> min ;
+            f (hour , min) ;
+            return 0 ;
+}
