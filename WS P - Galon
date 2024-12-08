@@ -19,3 +19,37 @@ int main () {
             f (l , m) ;
             return 0 ;
 }
+
+
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (double l , double m) {
+            double g = l * 0.264179 , miles = m / g ;
+            cout << "Gallons used and miles per gallon used to car travel : " << g << " gallons " << miles << " miles" << "\n" ;
+            string o ;
+            cout << "Press 'Y' to continue and 'N' to stop" << "\n" ;
+            cout << "Press : " ;
+            cin >> o ;
+            while (o != "N") {
+                        cout << "Enter the litres that car travel and the miles that car travels : " ;
+                        cin >> l >> m ;
+                        double g = l * 0.264179 , miles = m / g ;
+                        cout << "Gallons used and miles per gallon used to car travel : " << g << " gallons " << miles << " miles" << "\n" ;
+                        cout << "Press 'Y' to continue and 'N' to stop" << "\n" ;
+                        cout << "Press : " ;
+                        cin >> o ;
+            }
+            cout << "Program Finished" << "\n" ;
+            return 1 ;
+}
+
+int main () {
+            double l , m ;
+            cout << "Enter the litres that car travel and the miles that car travels : " ;
+            cin >> l >> m ;
+            f (l , m) ;
+            return 0 ;
+}
