@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (int a , int &b) {
+            cout << "Parameter a after call : " << a << "\n" ;
+            cout << "Parameter reference b after call : " << &b << "\n" ;
+            return 1 ;
+}
+
+int main () {
+            int a = 1 , b = 2 ;
+            f (a , b) ;
+            return 0 ;
+}
