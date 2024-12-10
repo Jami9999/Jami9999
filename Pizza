@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (double diameter_small_pizza , double diameter_big_pizza , double cost_small_pizza , double cost_big_pizza) {
+            cout << "WELCOME TO PIZZA HUT" << "\n" ;
+            cout << "SMALL PIZZA" << "\n" ;
+            cout << "Diameter : " << diameter_small_pizza << " m" << "\n" ;
+            cout << "Cost : $" << cost_small_pizza << " . Per square inch pizza cost : $" << (cost_small_pizza / diameter_small_pizza) << "\n" ; 
+            cout << "BIG PIZZA" << "\n" ;
+            cout << "Diameter : " << diameter_big_pizza << " m" << "\n" ;
+            cout << "Cost : $" << cost_big_pizza << " . Per square inch pizza cost : $" << (cost_big_pizza / diameter_big_pizza) << "\n" ;
+            string o ;
+            cout << "Do you want to eat again ?  ('Y' or 'N') " ;
+            cin >> o ;
+            while (o != "N") {
+                        string size ; 
+                        double diameter_pizza , cost_pizza ;
+                        cout << "Enter the size of the pizza in upper case letter : " ;
+                        cin >> size ;
+                        cout << "Enter diameter of " << size << " pizza in meter : " ;
+                        cin >> diameter_pizza ;
+                        cout << "Enter the cost of the " << size << " pizza : $" ;
+                        cin >> cost_pizza ;
+                        cout << size << " PIZZA" << "\n" ;
+                        cout << "Diameter : " << diameter_pizza << " m" << "\n" ;
+                        cout << "Cost : $" << cost_pizza << " . Per square inch cost : $" << (cost_pizza / diameter_pizza) << "\n" ;
+                        cout << "Do you want to eat again ? ('Y' or 'N') : " ;
+                        cin >> o ;
+            }
+            return 1 ;
+}
+
+int main () {
+            double diameter_small_pizza , diameter_big_pizza , cost_small_pizza , cost_big_pizza ;
+            cout << "Enter the diameter of small pizza in meter : " ;
+            cin >> diameter_small_pizza ;
+            cout << "Enter the cost of small pizza : $" ;
+            cin >> cost_small_pizza ;
+            cout << "Enter the diameter of big pizza in meter : " ;
+            cin >> diameter_big_pizza ;
+            cout << "Enter the cost of big pizza : $" ;
+            cin >> cost_big_pizza ;
+            f (diameter_small_pizza , diameter_big_pizza , cost_small_pizza , cost_big_pizza) ;
+            return 0 ;
+}
