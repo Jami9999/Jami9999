@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+using namespace std ;
+
+int f (int a , int b) {
+            int average_1 ;
+            average_1 = (a + b) / 2 ;
+            cout << "Average of first two numbers : " << average_1 << "\n" ;
+            return average_1 ;
+}
+
+int g (int c , int d) {
+            int average_2 ;
+            average_2 = (c + d) / 2 ;
+            cout << "Average of next two numbers : " << average_2 << "\n" ;
+            return average_2 ;
+}
+
+int h (int a , int b , int c , int d) {
+            int average_1 , average_2 ;
+            string o ;
+            cout << "Do you want to calculate again four numbers numbers ? ('Y' or 'N') " ;
+            cin >> o ;
+            while (o != "N") {
+                        cout << "Enter four numbers : " ;
+                        cin >> a >> b >> c >> d ;
+                        average_1 = (a + b) / 2 ;
+                        cout << "Average of two numbers : " << average_1 << "\n" ;
+                        average_2 = (c + d) / 2 ;
+                        cout << "Average of next two numbers : " << average_2 << "\n" ;
+                        cout << "Do you want to calculate again ? ('Y' or 'N') " ;
+                        cin >> o ;
+            }
+            return average_1 ;
+}
+
+int main () {
+            int a , b , c , d ;
+            cout << "Enter four numbers : " ;
+            cin >> a >> b >> c >> d ;
+            f (a , b) ;
+            g (c , d) ;
+            h (a , b , c , d) ;
+            return 0 ;
+}
